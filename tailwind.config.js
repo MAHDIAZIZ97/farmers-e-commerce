@@ -8,7 +8,10 @@ export default {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
+        './app/likelier/*.php',
+        './node_modules/preline/dist/*.js',
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             fontFamily: {
@@ -16,5 +19,7 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require('preline/plugin'),
+    ],
 };

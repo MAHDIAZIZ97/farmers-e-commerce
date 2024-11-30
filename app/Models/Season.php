@@ -8,7 +8,7 @@ class Season extends Model
 {
     protected $fillable = ['name','slug','image','is_active'];
 
-    public function product(){
+    public function products(){
         return $this->hasMany(Product::class);
     }
 

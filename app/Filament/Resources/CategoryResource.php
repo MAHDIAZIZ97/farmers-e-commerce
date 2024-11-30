@@ -25,6 +25,8 @@ class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
 
+    protected static ?int $navigationSort = 3;
+
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 
     public static function form(Form $form): Form
@@ -48,12 +50,12 @@ class CategoryResource extends Resource
                            ->unique(Category::class,'slug', ignoreRecord: true),
                       ]),
 
-                   FileUpload::make('image')
+                FileUpload::make('image')
                       ->image()
                       ->directory('categories'),
                 Toggle::make('is_active')
-                    ->required()
-                    ->default('true'),
+                        ->required()
+                        ->default('true'),
                 ])
             ]);
     }

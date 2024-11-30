@@ -24,6 +24,8 @@ class SeasonResource extends Resource
 {
     protected static ?string $model = Season::class;
 
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $navigationIcon = 'heroicon-o-sun';
 
     public static function form(Form $form): Form
